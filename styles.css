@@ -6,17 +6,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #2E7D32; 
+    background-color: #2E7D32; /* Green felt background */
     overflow: hidden;
     height: 100vh;
     width: 100vw;
     position: relative;
 }
 
+/* Hide all checkboxes */
 input[type="checkbox"] {
     display: none;
 }
 
+/* Home Page Styles */
 .home {
     position: absolute;
     top: 0;
@@ -57,14 +59,14 @@ input[type="checkbox"] {
     transform: scale(1.05);
 }
 
-
+/* Game Page Styles */
 .game {
     position: absolute;
-    top: 100vh; 
+    top: 100vh; /* Initially hidden below the viewport */
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #388E3C; 
+    background-color: #388E3C; /* Darker green */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +76,7 @@ input[type="checkbox"] {
     z-index: 1;
 }
 
-
+/* When the game is toggled on */
 #toggle-game:checked ~ .home {
     transform: translateY(-100vh);
     opacity: 0;
@@ -85,7 +87,7 @@ input[type="checkbox"] {
     opacity: 1;
 }
 
-
+/* Back Button Styles */
 .back-button {
     position: absolute;
     top: 20px;
@@ -105,3 +107,45 @@ input[type="checkbox"] {
     transform: scale(1.05);
 }
 
+/* Players Container */
+.players-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* Allow clicks through to buttons */
+}
+
+/* Individual Player Styles */
+.player {
+    position: absolute;
+    background-color: #1B5E20;
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s;
+    pointer-events: all; /* Enable interactions */
+}
+
+.player:hover {
+    transform: scale(1.05);
+}
+
+/* Player Name Circle */
+.player .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #81C784;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1B5E20;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+}
