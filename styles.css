@@ -1,1 +1,151 @@
-/* TODO: Styles to Be Added */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E7D32; /* Green felt background */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* Hide all checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Home Page Styles */
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 2;
+}
+
+.home h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+}
+
+.start-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFEB3B;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+
+.start-button:hover {
+    background-color: #FDD835;
+    transform: scale(1.05);
+}
+
+/* Game Page Styles */
+.game {
+    position: absolute;
+    top: 100vh; /* Initially hidden below the viewport */
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #388E3C; /* Darker green */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* When the game is toggled on */
+#toggle-game:checked ~ .home {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+#toggle-game:checked ~ .game {
+    transform: translateY(-100vh);
+    opacity: 1;
+}
+
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #FFEB3B;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    color: #000;
+    z-index: 3;
+}
+
+.back-button:hover {
+    background-color: #FDD835;
+    transform: scale(1.05);
+}
+
+/* Players Container */
+.players-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* Allow clicks through to buttons */
+}
+
+/* Individual Player Styles */
+.player {
+    position: absolute;
+    background-color: #1B5E20;
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s;
+    pointer-events: all; /* Enable interactions */
+}
+
+.player:hover {
+    transform: scale(1.05);
+}
+
+/* Player Name Circle */
+.player .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #81C784;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1B5E20;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+}
