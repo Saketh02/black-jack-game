@@ -2,11 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack Online Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <!-- Hidden Checkbox to Toggle Game State -->
+    <input type="checkbox" id="toggle-game" hidden>
+
+    <!-- Home Page -->
+    <div class="home">
+        <h1>Welcome to Blackjack Online Game</h1>
+        <label for="toggle-game" class="start-button">Start Game</label>
+    </div>
+
+    <!-- Game Page -->
+    <div class="game">
+        <!-- Back to Home Button -->
+        <label for="toggle-game" class="back-button">Back to Home</label>
+
+        <!-- Players Container -->
+        <div class="players-container">
+            <!-- Player 1 - Top Center -->
+            <div class="player" id="player1">
+                <div class="circle">Player-1</div>
+                <div class="controls">
+                    <!-- Hit Button -->
+                    <input type="checkbox" id="player1-hit" hidden>
+                    <label for="player1-hit" class="btn">Hit</label>
+                    
+                    
+                    <!-- Double Down Button -->
+                    <input type="checkbox" id="player1-double" hidden>
+                    <label for="player1-double" class="btn">Double Down</label>
+                </div>
+                <div class="cards">
+                    <!-- Initial Two Cards -->
+                    <img src="KH.png" alt="King of Hearts" class="card initial-card">
+                    <img src="KD.png" alt="King of Diamonds" class="card initial-card">
+                </div>
+            </div>
+
+            <!-- Player 2 - Right Center -->
+            <div class="player" id="player2">
+                <div class="circle">Player-2</div>
+                <div class="controls">
+                    <input type="checkbox" id="player2-hit" hidden>
+                    <label for="player2-hit" class="btn">Hit</label>
+                    
+
+                    <input type="checkbox" id="player2-double" hidden>
+                    <label for="player2-double" class="btn">Double Down</label>
+                </div>
+                <div class="cards">
+                    <img src="KC.png" alt="King of Clubs" class="card initial-card">
+                    <img src="3S.png" alt="3 of Spades" class="card initial-card">
+                </div>
+            </div>
+
+            <!-- Player 3 - Bottom Center -->
+            <div class="player" id="player3">
+                <div class="circle">Player-3</div>
+                <div class="controls">
+                    <input type="checkbox" id="player3-hit" hidden>
+                    <label for="player3-hit" class="btn">Hit</label>
+                
+                    
+                    <input type="checkbox" id="player3-double" hidden>
+                    <label for="player3-double" class="btn">Double Down</label>
+                </div>
+                <div class="cards">
+                    <img src="5H.png" alt="5 of Hearts" class="card initial-card">
+                    <img src="4D.png" alt="4 of Diamonds" class="card initial-card">
+                </div>
+            </div>
+            <a href="./winner.html" class="winner-btn">Show Winner</a>
+            <!-- Dealer - Left Center -->
+            <div class="player" id="dealer">
+                <div class="circle">Dealer</div>
+                <div class="controls">
+                    <input type="checkbox" id="dealer-hit" hidden>
+                    <label for="dealer-hit" class="btn">Hit</label>
+                    
+                    
+                    <input type="checkbox" id="dealer-double" hidden>
+                    <label for="dealer-double" class="btn">Double Down</label>
+                </div>
+                <div class="cards">
+                    <img src="KH.png" alt="King of Hearts" class="card initial-card">
+                    <img src="8S.png" alt="King of Diamonds" class="card initial-card">
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Area for Deck and Bets -->
+        <div class="center-area">
+            <!-- Deck of Cards -->
+            <div class="deck">
+                <img src="back.png" alt="Deck Back" class="card back">
+            </div>
+
+            <!-- Coins Representing Bets -->
+            <div class="coins">
+                <span class="coin">💰 $100</span>
+                <span class="coin">💰 $200</span>
+                <span class="coin">💰 $300</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
