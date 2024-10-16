@@ -421,9 +421,8 @@ input[type="checkbox"] {
         height: 60px; 
         font-size: 0.8em; 
     }
-}
-
-/* Center area for deck and bets */
+    
+    /* Center area for deck and bets */
     .center-area {
         flex-direction: column;
         gap: 20px; 
@@ -451,6 +450,7 @@ input[type="checkbox"] {
     .home h1 {
         font-size: 2em; 
     }
+}
 
     @media (max-width: 480px) {
         /* Additional adjustments for very small screens */
