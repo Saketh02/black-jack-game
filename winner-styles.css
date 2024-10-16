@@ -181,3 +181,32 @@ h1 {
         font-size: 0.8em; 
     }
 }
+
+/* Center area for deck and bets */
+    .center-area {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    /* Reduce coin size */
+    .coin {
+        padding: 8px 15px; 
+        font-size: 1em; 
+    }
+
+    /* Back button positioning */
+    .back-button {
+        top: 10px;
+        left: 10px; 
+    }
+
+    /* Adjust the start button */
+    .start-button {
+        padding: 10px 20px;
+        font-size: 1em; 
+    }
+
+    /* Adjust heading size */
+    .home h1 {
+        font-size: 2em; 
+    }
