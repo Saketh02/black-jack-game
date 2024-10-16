@@ -319,3 +319,57 @@ input[type="checkbox"] {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust player positioning */
+    #player1 {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #player2 {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    #player3 {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #dealer {
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    /* Font sizes */
+    .home h1 {
+        font-size: 2.5em; /* Smaller title for mobile */
+    }
+
+    .start-button {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .player {
+        width: 80%; /* Adjust player width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .card {
+        width: 50px; /* Adjust card size */
+        height: 75px; /* Adjust card height */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .coin {
+        padding: 8px 16px; /* Adjust coin size */
+        font-size: 1em; /* Adjust font size */
+    }
+}
